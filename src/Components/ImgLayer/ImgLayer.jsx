@@ -6,8 +6,13 @@ const ImgLayer = ({ layerActive, setLayerActive, activeImg }) => {
 
     useEffect(() => {
         const fun = async () => {
-            let blob = await fetch(activeImg.largeImageURL).then(r => r.blob());
-            setDownloadUrl(window.URL.createObjectURL(blob));
+            try {
+                let blob = await fetch(activeImg.largeImageURL).then(r => r.blob());
+                setDownloadUrl(window.URL.createObjectURL(blob));
+            }
+            catch (e) {
+
+            }
         }
         fun();
     }, [activeImg]);
