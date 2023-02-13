@@ -1,6 +1,4 @@
-# Project URL 
 
-https://thirsty-raman-916b60.netlify.app/
 
 # Getting Started with Create React App
 
